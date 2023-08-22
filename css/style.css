@@ -11,10 +11,15 @@ a {
 ul {
     list-style: none;
 }
+button {
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    cursor: pointer;
+}
 body {
     color: #000;
     font-family: 'Comfortaa', cursive;
-    /* font-family: 'Yeseva One', cursive; */
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -30,6 +35,7 @@ body {
     display: none;
     width: 30px;
     height: 25px;
+    background-color: transparent;
 }
 .menu__btn span {
     height: 1px;
@@ -65,6 +71,42 @@ body {
     top: -2px;
     left: -22px;
 }
+.main {
+    background-color: #FFF8F3;
+    overflow-x: clip;
+}
+.top {
+    padding: 40px 0 150px;
+}
+.top__inner {
+    position: relative;
+}
+.top__content {
+    width: 370px;
+    padding: 150px 0 250px;
+}
+.top__title {
+    font-family: 'Yeseva One', cursive;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.top__text {
+    margin-bottom: 48px;
+}
+.top__buy {
+    padding: 18px 54px;
+    background: #FFBD59;
+    font-family: Comfortaa;
+    font-size: 14px;
+    font-weight: 600;
+}
+.top__img {
+    position: absolute;
+    top: 0;
+    left: 240px;
+}
+
+
 .footer {
     padding: 39px 0 34px 0;
 }
@@ -89,6 +131,19 @@ body {
 @media (max-width: 1000px) {
     .container {
         padding: 0 20px;
+    }
+    .top__content {
+        width: 333px;
+        padding: 95px 0 70px;
+    }
+    .top__text {
+        margin-bottom: 30px;
+    }
+    .top__img {
+        left: 300px;
+    }
+    .top__img-l {
+        width: 655px;
     }
 }
 @media (max-width: 900px) {
@@ -117,6 +172,20 @@ body {
         top: -2px;
         left: -16px;
         background-size: cover;
+    }
+    .top__content {
+        width: 230px;
+    }
+    .top__title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .top__text {
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+    .top__img {
+        left: 180px;
     }
 }
 @media (max-width: 640px) {
@@ -157,5 +226,48 @@ body {
         flex-direction: column;
         margin: 50px 0 35px 0;
         gap: 22px;
+    }
+}
+@media (max-width: 480px) {
+    .top {
+        padding: 30px 0 50px;
+    }
+    .top__img-l {
+        width: 309px;
+        left: 167px;
+    }
+    .top__content {
+        width: 180px;
+    }
+    .top__title {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    .top__text {
+        font-size: 8px;
+        margin-bottom: 15px;
+    }
+    .top__buy {
+        font-size: 10px;
+        padding: 14px 41px;
+    }
+}
+@media (max-width: 360px) {
+    .top__img-l {
+        width: 185px;
+    }
+    .top__content {
+        padding: 20px 0 0;
+        width: 200px;
+    }
+    .top__img {
+        left: auto;
+        right: 0;
+    }
+    .top__title {
+        font-size: 18px;
+    }
+    .top__text {
+        font-size: 10px;
     }
 }
