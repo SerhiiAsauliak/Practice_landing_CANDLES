@@ -207,6 +207,38 @@ body {
 .products__item-text {
     margin-bottom: 27px;
 }
+.steps__list {
+    gap: 70px 25px;
+    counter-reset: number;
+}
+.steps__item {
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+    position: relative;
+}
+.steps__item::before {
+    counter-increment: number;
+    content: '0' counter(number);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #BEA495;
+    font-family: Yeseva One;
+    font-size: 30px;
+    font-weight: 400;
+}
+.steps__item.steps__item--even::before {
+    left: auto;
+    right: 0;
+}
+.steps__item:nth-child(10):before {
+    content: counter(number);
+}
+.steps__item-text {
+    flex-basis: 174px;
+    padding-bottom: 40px;
+}
 .footer {
     padding: 39px 0 34px 0;
 }
@@ -227,7 +259,14 @@ body {
     display: flex;
     gap: 15px;
 }
-
+@media (max-width: 1050px) {
+    .steps__list {
+        gap: 37px 35px;
+    }
+    .steps__item {
+        gap: 0 30px;
+    }
+}
 @media (max-width: 1000px) {
     .container {
         padding: 0 20px;
@@ -269,6 +308,25 @@ body {
     }
     .products__content {
         gap: 30px 16px;
+    }
+    .steps__list {
+        gap: 35px 37px;
+    }
+    .steps__item {
+        gap: 0 20px;
+    }
+    .steps__item::before {
+        font-size: 20px;
+    }
+    .steps__item-img {
+        width: 85px;
+        object-fit: cover;
+    }
+    .steps__item-text {
+        font-size: 8px;
+    }
+    .steps__title {
+        font-size: 30px;
     }
     .footer__inner {
         flex-wrap: wrap;
@@ -471,6 +529,20 @@ body {
         margin: 0 auto 30px;
         width: 300px;
     }
+    .steps__list {
+        gap: 25px 40px;
+    }
+}
+@media (max-width: 404px) {
+    .steps__list {
+        gap: 20px 25px;
+    }
+    .steps__item {
+        gap: 0 16px;
+    }
+    .steps__item-img {
+        width: 66px;
+    }
 }
 @media (max-width: 360px) {
     .top__img-l {
@@ -522,7 +594,7 @@ body {
     .products__content {
         gap: 40px 7px;
     }
-    .product__item-img {
+    .products__item-img {
         width: 150px;
     }
     .button {
@@ -538,5 +610,8 @@ body {
     }
     .products__item-text {
         margin-bottom: 16px;
+    }
+    .steps__item-text {
+        font-size: 6px;
     }
 }
