@@ -406,6 +406,44 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+.accordeon {
+}
+.accordeon__item {
+    background-color: #FAFAFA;
+    margin-bottom: 10px;
+}
+.accordeon__title {
+    font-size: 16px;
+    font-family: 'Yeseva One', cursive;
+    background-color: transparent;
+    display: block;
+    padding: 16px 50px 16px 13px;
+    position: relative;
+    width: 100%;
+    text-align: left;
+}
+.accordeon__title::after {
+    content: '';
+    background-image: url(../images/arrow-down.svg);
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 26px;
+    top: 17px;   
+}
+.accordeon__title.accordeon__title-active::after {
+    transform: rotate(180deg);
+}
+.accordeon__text {
+    opacity: 0;
+    max-height: 0;
+}
+.accordeon__text.accordeon__text--visible {
+    transition: opacity 0.3s;
+    opacity: 1;
+    max-height: max-content;
+    padding: 10px 40px;
+}
 .form {
     background-color: #fff;
     width: 664px;
@@ -557,6 +595,9 @@ body {
         font-size: 8px;
     }
     .steps__title {
+        font-size: 30px;
+    }
+    .questions__title {
         font-size: 30px;
     }
     .footer__inner {
@@ -857,6 +898,9 @@ body {
     }
     .contacts {
         padding-top: 50px;
+    }
+    .accordeon__title {
+        font-size: 14px;
     }
 }
 @media (max-width: 404px) {

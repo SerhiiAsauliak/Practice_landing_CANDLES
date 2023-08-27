@@ -32,3 +32,12 @@ const certificatesSwiper = new Swiper('.certificates__slider', {
     }
   });
 
+  const accordeonTitles = document.querySelectorAll('.accordeon__title')
+
+  accordeonTitles.forEach(el => {
+    el.addEventListener('click', () => {
+      el.nextElementSibling.classList.toggle('accordeon__text--visible')
+      el.classList.toggle('accordeon__title-active')
+    })
+  })
+
