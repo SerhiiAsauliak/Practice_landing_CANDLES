@@ -406,8 +406,6 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-.accordeon {
-}
 .accordeon__item {
     background-color: #FAFAFA;
     margin-bottom: 10px;
